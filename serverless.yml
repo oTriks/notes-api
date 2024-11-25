@@ -1,0 +1,140 @@
+service: notes-api
+frameworkVersion: '4'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: eu-north-1
+  environment:
+    JWT_SECRET: 4b8723f0d8bcee5e03fba29dd81b2c9b6ff93c7ad9a7d0ad46dbe35a4d2b5210
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - dynamodb:PutItem
+            - dynamodb:GetItem
+            - dynamodb:Query
+            - dynamodb:UpdateItem
+          Resource:
+            - arn:aws:dynamodb:eu-north-1:961341534568:table/UsersTable
+            - arn:aws:dynamodb:eu-north-1:961341534568:table/NotesTable
+
+
+custom:
+  esbuild:
+    bundle: true
+    minify: true
+    sourcemap: false
+    target: "node18"
+    external: ["bcryptjs", "jsonwebtoken"]
+    concurrency: 10
+
+functions:
+  signup:
+    handler: handlers/signup.handler
+    events:
+      - http:
+          path: api/user/signup
+          method: post
+          cors: true
+
+  login:
+    handler: handlers/login.handler
+    events:
+      - http:
+          path: api/user/login
+          method: post
+          cors: true
+
+  getNotes:
+    handler: handlers/getNotes.handler
+    events:
+      - http:
+          path: api/notes
+          method: get
+          cors: true
+
+  createNote:
+    handler: handlers/createNote.handler
+    events:
+      - http:
+          path: api/notes
+          method: post
+          cors: true
+
+  updateNote:
+    handler: handlers/updateNote.handler
+    events:
+      - http:
+          path: api/notes
+          method: put
+          cors: true
+
+  deleteNote:
+    handler: handlers/deleteNote.handler
+    events:
+      - http:
+          path: api/notes
+          method: delete
+          cors: true
+
+  restoreNote:
+    handler: handlers/restoreNote.handler
+    events:
+      - http:
+          path: api/notes/restore
+          method: post
+          cors: true
+
+resources:
+  Resources:
+    UsersTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: UsersTable
+        AttributeDefinitions:
+          - AttributeName: email
+            AttributeType: S
+        KeySchema:
+          - AttributeName: email
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+
+    NotesTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: NotesTable
+        AttributeDefinitions:
+          - AttributeName: userId
+            AttributeType: S
+          - AttributeName: noteId
+            AttributeType: S
+        KeySchema:
+          - AttributeName: userId
+            KeyType: HASH
+          - AttributeName: noteId
+            KeyType: RANGE
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+
+    DeletedNotesTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: DeletedNotesTable
+        AttributeDefinitions:
+          - AttributeName: userId
+            AttributeType: S
+          - AttributeName: noteId
+            AttributeType: S
+        KeySchema:
+          - AttributeName: userId
+            KeyType: HASH
+          - AttributeName: noteId
+            KeyType: RANGE
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1

@@ -1,5 +1,6 @@
 import AWS from 'aws-sdk';
 import middy from '@middy/core';
+import httpErrorHandler from '@middy/http-error-handler';
 import authMiddleware from '../authMiddleware.js';
 import { deleteNoteSchema } from '../validators/noteValidator.js';
 
@@ -34,7 +35,7 @@ const deleteNote = async (event) => {
         await dynamoDb.update(params).promise();
         return {
             statusCode: 200,
-            body: JSON.stringify({ message: 'Note marked as deleted.' }),
+            body: JSON.stringify({ message: 'Note deleted.' }),
         };
     } catch (error) {
         if (error.code === 'ConditionalCheckFailedException') {
@@ -51,4 +52,6 @@ const deleteNote = async (event) => {
     }
 };
 
-export const handler = middy(deleteNote).use(authMiddleware());
+export const handler = middy(deleteNote)
+    .use(authMiddleware())
+    .use(httpErrorHandler());

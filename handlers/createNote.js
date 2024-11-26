@@ -1,6 +1,7 @@
 import AWS from 'aws-sdk';
 import { v4 as uuidv4 } from 'uuid';
 import middy from '@middy/core';
+import httpErrorHandler from '@middy/http-error-handler';
 import authMiddleware from '../authMiddleware.js';
 import { createNoteSchema } from '../validators/noteValidator.js';
 
@@ -49,4 +50,6 @@ const createNote = async (event) => {
     }
 };
 
-export const handler = middy(createNote).use(authMiddleware());
+export const handler = middy(createNote)
+    .use(authMiddleware())
+    .use(httpErrorHandler());

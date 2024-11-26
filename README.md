@@ -2,6 +2,14 @@
 
 The Notes API allows users to manage notes, including creating, updating, deleting, restoring, and retrieving notes. Each note is tied to a specific user and requires authentication.
 
+## Insomnia Configuration
+
+1. Open Insomnia.
+2. Click on **Import/Export** in the top-right menu.
+3. Select **Import Data** -> **From File**.
+4. Choose the `insomnia_config.json` file from the `config` folder of this project.
+5. The API endpoints will be imported and ready to use in Insomnia.
+
 ## Base URL
 ```plaintext
 https://89gqosrb3f.execute-api.eu-north-1.amazonaws.com/dev/

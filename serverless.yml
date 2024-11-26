@@ -6,7 +6,7 @@ provider:
   runtime: nodejs18.x
   region: eu-north-1
   environment:
-    JWT_SECRET: 4b8723f0d8bcee5e03fba29dd81b2c9b6ff93c7ad9a7d0ad46dbe35a4d2b5210
+    JWT_SECRET: ${ssm:/JWT_SECRET}
   iam:
     role:
       statements:
@@ -16,9 +16,12 @@ provider:
             - dynamodb:GetItem
             - dynamodb:Query
             - dynamodb:UpdateItem
+            - ssm:GetParameter
           Resource:
             - arn:aws:dynamodb:eu-north-1:961341534568:table/UsersTable
             - arn:aws:dynamodb:eu-north-1:961341534568:table/NotesTable
+            - arn:aws:ssm:eu-north-1:961341534568:parameter/JWT_SECRET
+
 
 
 custom:

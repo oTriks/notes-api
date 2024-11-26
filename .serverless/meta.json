@@ -29,11 +29,13 @@
                         "dynamodb:PutItem",
                         "dynamodb:GetItem",
                         "dynamodb:Query",
-                        "dynamodb:UpdateItem"
+                        "dynamodb:UpdateItem",
+                        "ssm:GetParameter"
                       ],
                       "Resource": [
                         "arn:aws:dynamodb:eu-north-1:961341534568:table/UsersTable",
-                        "arn:aws:dynamodb:eu-north-1:961341534568:table/NotesTable"
+                        "arn:aws:dynamodb:eu-north-1:961341534568:table/NotesTable",
+                        "arn:aws:ssm:eu-north-1:961341534568:parameter/JWT_SECRET"
                       ]
                     }
                   ]
@@ -151,11 +153,13 @@
                                   "dynamodb:PutItem",
                                   "dynamodb:GetItem",
                                   "dynamodb:Query",
-                                  "dynamodb:UpdateItem"
+                                  "dynamodb:UpdateItem",
+                                  "ssm:GetParameter"
                                 ],
                                 "Resource": [
                                   "arn:aws:dynamodb:eu-north-1:961341534568:table/UsersTable",
-                                  "arn:aws:dynamodb:eu-north-1:961341534568:table/NotesTable"
+                                  "arn:aws:dynamodb:eu-north-1:961341534568:table/NotesTable",
+                                  "arn:aws:ssm:eu-north-1:961341534568:parameter/JWT_SECRET"
                                 ]
                               }
                             ]
@@ -183,7 +187,7 @@
                     "Properties": {
                       "Code": {
                         "S3Bucket": "serverless-framework-deployments-eu-north-1-9b459505-9cff",
-                        "S3Key": "serverless/notes-api/dev/1732657603136-2024-11-26T21:46:43.136Z/notes-api.zip"
+                        "S3Key": "serverless/notes-api/dev/1732658480279-2024-11-26T22:01:20.279Z/notes-api.zip"
                       },
                       "Handler": "handlers/signup.handler",
                       "Runtime": "nodejs18.x",
@@ -211,7 +215,7 @@
                     "Properties": {
                       "Code": {
                         "S3Bucket": "serverless-framework-deployments-eu-north-1-9b459505-9cff",
-                        "S3Key": "serverless/notes-api/dev/1732657603136-2024-11-26T21:46:43.136Z/notes-api.zip"
+                        "S3Key": "serverless/notes-api/dev/1732658480279-2024-11-26T22:01:20.279Z/notes-api.zip"
                       },
                       "Handler": "handlers/login.handler",
                       "Runtime": "nodejs18.x",
@@ -239,7 +243,7 @@
                     "Properties": {
                       "Code": {
                         "S3Bucket": "serverless-framework-deployments-eu-north-1-9b459505-9cff",
-                        "S3Key": "serverless/notes-api/dev/1732657603136-2024-11-26T21:46:43.136Z/notes-api.zip"
+                        "S3Key": "serverless/notes-api/dev/1732658480279-2024-11-26T22:01:20.279Z/notes-api.zip"
                       },
                       "Handler": "handlers/getNotes.handler",
                       "Runtime": "nodejs18.x",
@@ -267,7 +271,7 @@
                     "Properties": {
                       "Code": {
                         "S3Bucket": "serverless-framework-deployments-eu-north-1-9b459505-9cff",
-                        "S3Key": "serverless/notes-api/dev/1732657603136-2024-11-26T21:46:43.136Z/notes-api.zip"
+                        "S3Key": "serverless/notes-api/dev/1732658480279-2024-11-26T22:01:20.279Z/notes-api.zip"
                       },
                       "Handler": "handlers/createNote.handler",
                       "Runtime": "nodejs18.x",
@@ -295,7 +299,7 @@
                     "Properties": {
                       "Code": {
                         "S3Bucket": "serverless-framework-deployments-eu-north-1-9b459505-9cff",
-                        "S3Key": "serverless/notes-api/dev/1732657603136-2024-11-26T21:46:43.136Z/notes-api.zip"
+                        "S3Key": "serverless/notes-api/dev/1732658480279-2024-11-26T22:01:20.279Z/notes-api.zip"
                       },
                       "Handler": "handlers/updateNote.handler",
                       "Runtime": "nodejs18.x",
@@ -323,7 +327,7 @@
                     "Properties": {
                       "Code": {
                         "S3Bucket": "serverless-framework-deployments-eu-north-1-9b459505-9cff",
-                        "S3Key": "serverless/notes-api/dev/1732657603136-2024-11-26T21:46:43.136Z/notes-api.zip"
+                        "S3Key": "serverless/notes-api/dev/1732658480279-2024-11-26T22:01:20.279Z/notes-api.zip"
                       },
                       "Handler": "handlers/deleteNote.handler",
                       "Runtime": "nodejs18.x",
@@ -351,7 +355,7 @@
                     "Properties": {
                       "Code": {
                         "S3Bucket": "serverless-framework-deployments-eu-north-1-9b459505-9cff",
-                        "S3Key": "serverless/notes-api/dev/1732657603136-2024-11-26T21:46:43.136Z/notes-api.zip"
+                        "S3Key": "serverless/notes-api/dev/1732658480279-2024-11-26T22:01:20.279Z/notes-api.zip"
                       },
                       "Handler": "handlers/restoreNote.handler",
                       "Runtime": "nodejs18.x",
@@ -1033,7 +1037,7 @@
                       "RestoreNoteLambdaPermissionApiGateway"
                     ]
                   },
-                  "ApiGatewayDeployment1732657595139": {
+                  "ApiGatewayDeployment1732658472728": {
                     "Type": "AWS::ApiGateway::Deployment",
                     "Properties": {
                       "RestApiId": {
@@ -1891,11 +1895,13 @@
                   "dynamodb:PutItem",
                   "dynamodb:GetItem",
                   "dynamodb:Query",
-                  "dynamodb:UpdateItem"
+                  "dynamodb:UpdateItem",
+                  "ssm:GetParameter"
                 ],
                 "Resource": [
                   "arn:aws:dynamodb:eu-north-1:961341534568:table/UsersTable",
-                  "arn:aws:dynamodb:eu-north-1:961341534568:table/NotesTable"
+                  "arn:aws:dynamodb:eu-north-1:961341534568:table/NotesTable",
+                  "arn:aws:ssm:eu-north-1:961341534568:parameter/JWT_SECRET"
                 ]
               }
             ]
@@ -2013,11 +2019,13 @@
                             "dynamodb:PutItem",
                             "dynamodb:GetItem",
                             "dynamodb:Query",
-                            "dynamodb:UpdateItem"
+                            "dynamodb:UpdateItem",
+                            "ssm:GetParameter"
                           ],
                           "Resource": [
                             "arn:aws:dynamodb:eu-north-1:961341534568:table/UsersTable",
-                            "arn:aws:dynamodb:eu-north-1:961341534568:table/NotesTable"
+                            "arn:aws:dynamodb:eu-north-1:961341534568:table/NotesTable",
+                            "arn:aws:ssm:eu-north-1:961341534568:parameter/JWT_SECRET"
                           ]
                         }
                       ]
@@ -2045,7 +2053,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-eu-north-1-9b459505-9cff",
-                  "S3Key": "serverless/notes-api/dev/1732657603136-2024-11-26T21:46:43.136Z/notes-api.zip"
+                  "S3Key": "serverless/notes-api/dev/1732658480279-2024-11-26T22:01:20.279Z/notes-api.zip"
                 },
                 "Handler": "handlers/signup.handler",
                 "Runtime": "nodejs18.x",
@@ -2073,7 +2081,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-eu-north-1-9b459505-9cff",
-                  "S3Key": "serverless/notes-api/dev/1732657603136-2024-11-26T21:46:43.136Z/notes-api.zip"
+                  "S3Key": "serverless/notes-api/dev/1732658480279-2024-11-26T22:01:20.279Z/notes-api.zip"
                 },
                 "Handler": "handlers/login.handler",
                 "Runtime": "nodejs18.x",
@@ -2101,7 +2109,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-eu-north-1-9b459505-9cff",
-                  "S3Key": "serverless/notes-api/dev/1732657603136-2024-11-26T21:46:43.136Z/notes-api.zip"
+                  "S3Key": "serverless/notes-api/dev/1732658480279-2024-11-26T22:01:20.279Z/notes-api.zip"
                 },
                 "Handler": "handlers/getNotes.handler",
                 "Runtime": "nodejs18.x",
@@ -2129,7 +2137,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-eu-north-1-9b459505-9cff",
-                  "S3Key": "serverless/notes-api/dev/1732657603136-2024-11-26T21:46:43.136Z/notes-api.zip"
+                  "S3Key": "serverless/notes-api/dev/1732658480279-2024-11-26T22:01:20.279Z/notes-api.zip"
                 },
                 "Handler": "handlers/createNote.handler",
                 "Runtime": "nodejs18.x",
@@ -2157,7 +2165,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-eu-north-1-9b459505-9cff",
-                  "S3Key": "serverless/notes-api/dev/1732657603136-2024-11-26T21:46:43.136Z/notes-api.zip"
+                  "S3Key": "serverless/notes-api/dev/1732658480279-2024-11-26T22:01:20.279Z/notes-api.zip"
                 },
                 "Handler": "handlers/updateNote.handler",
                 "Runtime": "nodejs18.x",
@@ -2185,7 +2193,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-eu-north-1-9b459505-9cff",
-                  "S3Key": "serverless/notes-api/dev/1732657603136-2024-11-26T21:46:43.136Z/notes-api.zip"
+                  "S3Key": "serverless/notes-api/dev/1732658480279-2024-11-26T22:01:20.279Z/notes-api.zip"
                 },
                 "Handler": "handlers/deleteNote.handler",
                 "Runtime": "nodejs18.x",
@@ -2213,7 +2221,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-eu-north-1-9b459505-9cff",
-                  "S3Key": "serverless/notes-api/dev/1732657603136-2024-11-26T21:46:43.136Z/notes-api.zip"
+                  "S3Key": "serverless/notes-api/dev/1732658480279-2024-11-26T22:01:20.279Z/notes-api.zip"
                 },
                 "Handler": "handlers/restoreNote.handler",
                 "Runtime": "nodejs18.x",
@@ -2895,7 +2903,7 @@
                 "RestoreNoteLambdaPermissionApiGateway"
               ]
             },
-            "ApiGatewayDeployment1732657595139": {
+            "ApiGatewayDeployment1732658472728": {
               "Type": "AWS::ApiGateway::Deployment",
               "Properties": {
                 "RestApiId": {
@@ -3714,7 +3722,7 @@
         "Outputs": {}
       }
     },
-    "serviceRawFile": "service: notes-api\r\nframeworkVersion: '4'\r\n\r\nprovider:\r\n  name: aws\r\n  runtime: nodejs18.x\r\n  region: eu-north-1\r\n  environment:\r\n    JWT_SECRET: 4b8723f0d8bcee5e03fba29dd81b2c9b6ff93c7ad9a7d0ad46dbe35a4d2b5210\r\n  iam:\r\n    role:\r\n      statements:\r\n        - Effect: Allow\r\n          Action:\r\n            - dynamodb:PutItem\r\n            - dynamodb:GetItem\r\n            - dynamodb:Query\r\n            - dynamodb:UpdateItem\r\n          Resource:\r\n            - arn:aws:dynamodb:eu-north-1:961341534568:table/UsersTable\r\n            - arn:aws:dynamodb:eu-north-1:961341534568:table/NotesTable\r\n\r\n\r\ncustom:\r\n  esbuild:\r\n    bundle: true\r\n    minify: true\r\n    sourcemap: false\r\n    target: \"node18\"\r\n    external: [\"bcryptjs\", \"jsonwebtoken\"]\r\n    concurrency: 10\r\n\r\nfunctions:\r\n  signup:\r\n    handler: handlers/signup.handler\r\n    events:\r\n      - http:\r\n          path: api/user/signup\r\n          method: post\r\n          cors: true\r\n\r\n  login:\r\n    handler: handlers/login.handler\r\n    events:\r\n      - http:\r\n          path: api/user/login\r\n          method: post\r\n          cors: true\r\n\r\n  getNotes:\r\n    handler: handlers/getNotes.handler\r\n    events:\r\n      - http:\r\n          path: api/notes\r\n          method: get\r\n          cors: true\r\n\r\n  createNote:\r\n    handler: handlers/createNote.handler\r\n    events:\r\n      - http:\r\n          path: api/notes\r\n          method: post\r\n          cors: true\r\n\r\n  updateNote:\r\n    handler: handlers/updateNote.handler\r\n    events:\r\n      - http:\r\n          path: api/notes\r\n          method: put\r\n          cors: true\r\n\r\n  deleteNote:\r\n    handler: handlers/deleteNote.handler\r\n    events:\r\n      - http:\r\n          path: api/notes\r\n          method: delete\r\n          cors: true\r\n\r\n  restoreNote:\r\n    handler: handlers/restoreNote.handler\r\n    events:\r\n      - http:\r\n          path: api/notes/restore\r\n          method: post\r\n          cors: true\r\n\r\nresources:\r\n  Resources:\r\n    UsersTable:\r\n      Type: AWS::DynamoDB::Table\r\n      Properties:\r\n        TableName: UsersTable\r\n        AttributeDefinitions:\r\n          - AttributeName: email\r\n            AttributeType: S\r\n        KeySchema:\r\n          - AttributeName: email\r\n            KeyType: HASH\r\n        ProvisionedThroughput:\r\n          ReadCapacityUnits: 1\r\n          WriteCapacityUnits: 1\r\n\r\n    NotesTable:\r\n      Type: AWS::DynamoDB::Table\r\n      Properties:\r\n        TableName: NotesTable\r\n        AttributeDefinitions:\r\n          - AttributeName: userId\r\n            AttributeType: S\r\n          - AttributeName: noteId\r\n            AttributeType: S\r\n        KeySchema:\r\n          - AttributeName: userId\r\n            KeyType: HASH\r\n          - AttributeName: noteId\r\n            KeyType: RANGE\r\n        ProvisionedThroughput:\r\n          ReadCapacityUnits: 1\r\n          WriteCapacityUnits: 1\r\n\r\n    DeletedNotesTable:\r\n      Type: AWS::DynamoDB::Table\r\n      Properties:\r\n        TableName: DeletedNotesTable\r\n        AttributeDefinitions:\r\n          - AttributeName: userId\r\n            AttributeType: S\r\n          - AttributeName: noteId\r\n            AttributeType: S\r\n        KeySchema:\r\n          - AttributeName: userId\r\n            KeyType: HASH\r\n          - AttributeName: noteId\r\n            KeyType: RANGE\r\n        ProvisionedThroughput:\r\n          ReadCapacityUnits: 1\r\n          WriteCapacityUnits: 1\r\n",
+    "serviceRawFile": "service: notes-api\r\nframeworkVersion: '4'\r\n\r\nprovider:\r\n  name: aws\r\n  runtime: nodejs18.x\r\n  region: eu-north-1\r\n  environment:\r\n    JWT_SECRET: ${ssm:/JWT_SECRET}\r\n  iam:\r\n    role:\r\n      statements:\r\n        - Effect: Allow\r\n          Action:\r\n            - dynamodb:PutItem\r\n            - dynamodb:GetItem\r\n            - dynamodb:Query\r\n            - dynamodb:UpdateItem\r\n            - ssm:GetParameter\r\n          Resource:\r\n            - arn:aws:dynamodb:eu-north-1:961341534568:table/UsersTable\r\n            - arn:aws:dynamodb:eu-north-1:961341534568:table/NotesTable\r\n            - arn:aws:ssm:eu-north-1:961341534568:parameter/JWT_SECRET\r\n\r\n\r\n\r\ncustom:\r\n  esbuild:\r\n    bundle: true\r\n    minify: true\r\n    sourcemap: false\r\n    target: \"node18\"\r\n    external: [\"bcryptjs\", \"jsonwebtoken\"]\r\n    concurrency: 10\r\n\r\nfunctions:\r\n  signup:\r\n    handler: handlers/signup.handler\r\n    events:\r\n      - http:\r\n          path: api/user/signup\r\n          method: post\r\n          cors: true\r\n\r\n  login:\r\n    handler: handlers/login.handler\r\n    events:\r\n      - http:\r\n          path: api/user/login\r\n          method: post\r\n          cors: true\r\n\r\n  getNotes:\r\n    handler: handlers/getNotes.handler\r\n    events:\r\n      - http:\r\n          path: api/notes\r\n          method: get\r\n          cors: true\r\n\r\n  createNote:\r\n    handler: handlers/createNote.handler\r\n    events:\r\n      - http:\r\n          path: api/notes\r\n          method: post\r\n          cors: true\r\n\r\n  updateNote:\r\n    handler: handlers/updateNote.handler\r\n    events:\r\n      - http:\r\n          path: api/notes\r\n          method: put\r\n          cors: true\r\n\r\n  deleteNote:\r\n    handler: handlers/deleteNote.handler\r\n    events:\r\n      - http:\r\n          path: api/notes\r\n          method: delete\r\n          cors: true\r\n\r\n  restoreNote:\r\n    handler: handlers/restoreNote.handler\r\n    events:\r\n      - http:\r\n          path: api/notes/restore\r\n          method: post\r\n          cors: true\r\n\r\nresources:\r\n  Resources:\r\n    UsersTable:\r\n      Type: AWS::DynamoDB::Table\r\n      Properties:\r\n        TableName: UsersTable\r\n        AttributeDefinitions:\r\n          - AttributeName: email\r\n            AttributeType: S\r\n        KeySchema:\r\n          - AttributeName: email\r\n            KeyType: HASH\r\n        ProvisionedThroughput:\r\n          ReadCapacityUnits: 1\r\n          WriteCapacityUnits: 1\r\n\r\n    NotesTable:\r\n      Type: AWS::DynamoDB::Table\r\n      Properties:\r\n        TableName: NotesTable\r\n        AttributeDefinitions:\r\n          - AttributeName: userId\r\n            AttributeType: S\r\n          - AttributeName: noteId\r\n            AttributeType: S\r\n        KeySchema:\r\n          - AttributeName: userId\r\n            KeyType: HASH\r\n          - AttributeName: noteId\r\n            KeyType: RANGE\r\n        ProvisionedThroughput:\r\n          ReadCapacityUnits: 1\r\n          WriteCapacityUnits: 1\r\n\r\n    DeletedNotesTable:\r\n      Type: AWS::DynamoDB::Table\r\n      Properties:\r\n        TableName: DeletedNotesTable\r\n        AttributeDefinitions:\r\n          - AttributeName: userId\r\n            AttributeType: S\r\n          - AttributeName: noteId\r\n            AttributeType: S\r\n        KeySchema:\r\n          - AttributeName: userId\r\n            KeyType: HASH\r\n          - AttributeName: noteId\r\n            KeyType: RANGE\r\n        ProvisionedThroughput:\r\n          ReadCapacityUnits: 1\r\n          WriteCapacityUnits: 1\r\n",
     "command": [
       "deploy"
     ],
@@ -3753,7 +3761,7 @@
     "serviceUniqueId": "arn:aws:cloudformation:eu-north-1:961341534568:stack/notes-api-dev/3e171020-ab10-11ef-b0c2-06051fe52771",
     "serviceProviderAwsCfStackId": "arn:aws:cloudformation:eu-north-1:961341534568:stack/notes-api-dev/3e171020-ab10-11ef-b0c2-06051fe52771",
     "serviceProviderAwsCfStackCreated": "2024-11-25T09:32:52.228Z",
-    "serviceProviderAwsCfStackUpdated": "2024-11-26T21:24:58.858Z",
+    "serviceProviderAwsCfStackUpdated": "2024-11-26T22:00:40.850Z",
     "serviceProviderAwsCfStackStatus": "UPDATE_COMPLETE",
     "serviceProviderAwsCfStackOutputs": [
       {

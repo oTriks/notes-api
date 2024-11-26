@@ -183,7 +183,7 @@
                     "Properties": {
                       "Code": {
                         "S3Bucket": "serverless-framework-deployments-eu-north-1-9b459505-9cff",
-                        "S3Key": "serverless/notes-api/dev/1732656249584-2024-11-26T21:24:09.584Z/notes-api.zip"
+                        "S3Key": "serverless/notes-api/dev/1732657603136-2024-11-26T21:46:43.136Z/notes-api.zip"
                       },
                       "Handler": "handlers/signup.handler",
                       "Runtime": "nodejs18.x",
@@ -211,7 +211,7 @@
                     "Properties": {
                       "Code": {
                         "S3Bucket": "serverless-framework-deployments-eu-north-1-9b459505-9cff",
-                        "S3Key": "serverless/notes-api/dev/1732656249584-2024-11-26T21:24:09.584Z/notes-api.zip"
+                        "S3Key": "serverless/notes-api/dev/1732657603136-2024-11-26T21:46:43.136Z/notes-api.zip"
                       },
                       "Handler": "handlers/login.handler",
                       "Runtime": "nodejs18.x",
@@ -239,7 +239,7 @@
                     "Properties": {
                       "Code": {
                         "S3Bucket": "serverless-framework-deployments-eu-north-1-9b459505-9cff",
-                        "S3Key": "serverless/notes-api/dev/1732656249584-2024-11-26T21:24:09.584Z/notes-api.zip"
+                        "S3Key": "serverless/notes-api/dev/1732657603136-2024-11-26T21:46:43.136Z/notes-api.zip"
                       },
                       "Handler": "handlers/getNotes.handler",
                       "Runtime": "nodejs18.x",
@@ -267,7 +267,7 @@
                     "Properties": {
                       "Code": {
                         "S3Bucket": "serverless-framework-deployments-eu-north-1-9b459505-9cff",
-                        "S3Key": "serverless/notes-api/dev/1732656249584-2024-11-26T21:24:09.584Z/notes-api.zip"
+                        "S3Key": "serverless/notes-api/dev/1732657603136-2024-11-26T21:46:43.136Z/notes-api.zip"
                       },
                       "Handler": "handlers/createNote.handler",
                       "Runtime": "nodejs18.x",
@@ -295,7 +295,7 @@
                     "Properties": {
                       "Code": {
                         "S3Bucket": "serverless-framework-deployments-eu-north-1-9b459505-9cff",
-                        "S3Key": "serverless/notes-api/dev/1732656249584-2024-11-26T21:24:09.584Z/notes-api.zip"
+                        "S3Key": "serverless/notes-api/dev/1732657603136-2024-11-26T21:46:43.136Z/notes-api.zip"
                       },
                       "Handler": "handlers/updateNote.handler",
                       "Runtime": "nodejs18.x",
@@ -323,7 +323,7 @@
                     "Properties": {
                       "Code": {
                         "S3Bucket": "serverless-framework-deployments-eu-north-1-9b459505-9cff",
-                        "S3Key": "serverless/notes-api/dev/1732656249584-2024-11-26T21:24:09.584Z/notes-api.zip"
+                        "S3Key": "serverless/notes-api/dev/1732657603136-2024-11-26T21:46:43.136Z/notes-api.zip"
                       },
                       "Handler": "handlers/deleteNote.handler",
                       "Runtime": "nodejs18.x",
@@ -351,7 +351,7 @@
                     "Properties": {
                       "Code": {
                         "S3Bucket": "serverless-framework-deployments-eu-north-1-9b459505-9cff",
-                        "S3Key": "serverless/notes-api/dev/1732656249584-2024-11-26T21:24:09.584Z/notes-api.zip"
+                        "S3Key": "serverless/notes-api/dev/1732657603136-2024-11-26T21:46:43.136Z/notes-api.zip"
                       },
                       "Handler": "handlers/restoreNote.handler",
                       "Runtime": "nodejs18.x",
@@ -1033,7 +1033,7 @@
                       "RestoreNoteLambdaPermissionApiGateway"
                     ]
                   },
-                  "ApiGatewayDeployment1732656241141": {
+                  "ApiGatewayDeployment1732657595139": {
                     "Type": "AWS::ApiGateway::Deployment",
                     "Properties": {
                       "RestApiId": {
@@ -2045,7 +2045,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-eu-north-1-9b459505-9cff",
-                  "S3Key": "serverless/notes-api/dev/1732656249584-2024-11-26T21:24:09.584Z/notes-api.zip"
+                  "S3Key": "serverless/notes-api/dev/1732657603136-2024-11-26T21:46:43.136Z/notes-api.zip"
                 },
                 "Handler": "handlers/signup.handler",
                 "Runtime": "nodejs18.x",
@@ -2073,7 +2073,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-eu-north-1-9b459505-9cff",
-                  "S3Key": "serverless/notes-api/dev/1732656249584-2024-11-26T21:24:09.584Z/notes-api.zip"
+                  "S3Key": "serverless/notes-api/dev/1732657603136-2024-11-26T21:46:43.136Z/notes-api.zip"
                 },
                 "Handler": "handlers/login.handler",
                 "Runtime": "nodejs18.x",
@@ -2101,7 +2101,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-eu-north-1-9b459505-9cff",
-                  "S3Key": "serverless/notes-api/dev/1732656249584-2024-11-26T21:24:09.584Z/notes-api.zip"
+                  "S3Key": "serverless/notes-api/dev/1732657603136-2024-11-26T21:46:43.136Z/notes-api.zip"
                 },
                 "Handler": "handlers/getNotes.handler",
                 "Runtime": "nodejs18.x",
@@ -2129,7 +2129,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-eu-north-1-9b459505-9cff",
-                  "S3Key": "serverless/notes-api/dev/1732656249584-2024-11-26T21:24:09.584Z/notes-api.zip"
+                  "S3Key": "serverless/notes-api/dev/1732657603136-2024-11-26T21:46:43.136Z/notes-api.zip"
                 },
                 "Handler": "handlers/createNote.handler",
                 "Runtime": "nodejs18.x",
@@ -2157,7 +2157,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-eu-north-1-9b459505-9cff",
-                  "S3Key": "serverless/notes-api/dev/1732656249584-2024-11-26T21:24:09.584Z/notes-api.zip"
+                  "S3Key": "serverless/notes-api/dev/1732657603136-2024-11-26T21:46:43.136Z/notes-api.zip"
                 },
                 "Handler": "handlers/updateNote.handler",
                 "Runtime": "nodejs18.x",
@@ -2185,7 +2185,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-eu-north-1-9b459505-9cff",
-                  "S3Key": "serverless/notes-api/dev/1732656249584-2024-11-26T21:24:09.584Z/notes-api.zip"
+                  "S3Key": "serverless/notes-api/dev/1732657603136-2024-11-26T21:46:43.136Z/notes-api.zip"
                 },
                 "Handler": "handlers/deleteNote.handler",
                 "Runtime": "nodejs18.x",
@@ -2213,7 +2213,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-eu-north-1-9b459505-9cff",
-                  "S3Key": "serverless/notes-api/dev/1732656249584-2024-11-26T21:24:09.584Z/notes-api.zip"
+                  "S3Key": "serverless/notes-api/dev/1732657603136-2024-11-26T21:46:43.136Z/notes-api.zip"
                 },
                 "Handler": "handlers/restoreNote.handler",
                 "Runtime": "nodejs18.x",
@@ -2895,7 +2895,7 @@
                 "RestoreNoteLambdaPermissionApiGateway"
               ]
             },
-            "ApiGatewayDeployment1732656241141": {
+            "ApiGatewayDeployment1732657595139": {
               "Type": "AWS::ApiGateway::Deployment",
               "Properties": {
                 "RestApiId": {

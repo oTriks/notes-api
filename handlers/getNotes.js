@@ -1,5 +1,6 @@
 import AWS from 'aws-sdk';
 import middy from '@middy/core';
+import httpErrorHandler from '@middy/http-error-handler';
 import authMiddleware from '../authMiddleware.js';
 
 const dynamoDb = new AWS.DynamoDB.DocumentClient();
@@ -32,4 +33,6 @@ const getNotes = async (event) => {
     }
 };
 
-export const handler = middy(getNotes).use(authMiddleware());
+export const handler = middy(getNotes)
+    .use(authMiddleware())
+    .use(httpErrorHandler());

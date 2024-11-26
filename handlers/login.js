@@ -9,7 +9,6 @@ const JWT_SECRET = process.env.JWT_SECRET || 'your_jwt_secret';
 export const handler = async (event) => {
     const { email, password } = JSON.parse(event.body);
 
-    // Validate input
     const { error } = userSchema.validate({ email, password });
     if (error) {
         return {

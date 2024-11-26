@@ -1,5 +1,6 @@
 import AWS from 'aws-sdk';
 import middy from '@middy/core';
+import httpErrorHandler from '@middy/http-error-handler';
 import authMiddleware from '../authMiddleware.js';
 import { updateNoteSchema } from '../validators/noteValidator.js';
 
@@ -59,4 +60,6 @@ const updateNote = async (event) => {
     }
 };
 
-export const handler = middy(updateNote).use(authMiddleware());
+export const handler = middy(updateNote)
+    .use(authMiddleware())
+    .use(httpErrorHandler());

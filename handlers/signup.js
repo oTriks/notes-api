@@ -1,4 +1,3 @@
-import { nanoid } from 'nanoid';
 import AWS from 'aws-sdk';
 import bcrypt from 'bcryptjs';
 import userSchema from '../validators/userValidator.js';
@@ -8,7 +7,6 @@ const dynamoDb = new AWS.DynamoDB.DocumentClient();
 export const handler = async (event) => {
     const { email, password } = JSON.parse(event.body);
 
-    // Validate the input
     const { error } = userSchema.validate({ email, password });
     if (error) {
         return {
@@ -17,12 +15,7 @@ export const handler = async (event) => {
         };
     }
 
-    // Hash the password
     const hashedPassword = await bcrypt.hash(password, 10);
-
-    // Generate a unique userId
-    const userId = nanoid();
-
     const params = {
         TableName: 'UsersTable',
         Item: {

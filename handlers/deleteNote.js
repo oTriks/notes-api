@@ -27,7 +27,7 @@ const deleteNote = async (event) => {
         ExpressionAttributeValues: {
             ':deleted': true,
         },
-        ConditionExpression: 'attribute_exists(noteId)', // Ensure the note exists before marking as deleted
+        ConditionExpression: 'attribute_exists(noteId)',
     };
 
     try {

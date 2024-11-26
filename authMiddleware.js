@@ -6,7 +6,7 @@ const authMiddleware = () => ({
     before: async (handler) => {
         const token = handler.event.headers?.Authorization;
 
-        console.log('Authorization Header:', token); // Log the Authorization header
+        console.log('Authorization Header:', token);
 
         if (!token || !token.startsWith('Bearer ')) {
             console.error('Unauthorized: Missing or malformed token');
@@ -15,10 +15,10 @@ const authMiddleware = () => ({
 
         try {
             const decoded = jwt.verify(token.split(' ')[1], JWT_SECRET);
-            console.log('Decoded Token:', decoded); // Log the decoded token
-            handler.event.auth = decoded; // Attach decoded token to the event
+            console.log('Decoded Token:', decoded);
+            handler.event.auth = decoded;
         } catch (error) {
-            console.error('Token verification failed:', error.message); // Log verification error
+            console.error('Token verification failed:', error.message);
             throw new Error('Unauthorized');
         }
     },
